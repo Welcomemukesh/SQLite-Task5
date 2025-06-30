@@ -1,0 +1,9 @@
+SELECT Customer.Customer_name, "Order".Product
+FROM Customer
+LEFT JOIN "Order" ON Customer.Customer_id = "Order".Customer_id
+
+UNION
+
+SELECT Customer.Customer_name, "Order".Product
+FROM "Order"
+LEFT JOIN Customer ON "Order".Customer_id = Customer.Customer_id;
